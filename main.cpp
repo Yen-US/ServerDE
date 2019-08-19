@@ -2,45 +2,39 @@
 
 #include "listas_enlazadas/list.h"
 #include "listas_enlazadas/list.cpp"
+#include "arboles_binarios/abb.cpp"
 
 using namespace std;
 
 int main()
 {
+    ABB arbol = NULL;
+    int x;
     List list;
     int ele;
-    int dat;
-    int dat1;
-
     cout << "Digite un número " << endl;
     cin >> ele;
     switch(ele)
     {
         case 1:
-            cout << "Agrega un elemento por la cabeza: " << endl;
-            cin>>dat;
-            list.add_head(dat);
-            cout << "Agrega un elemento por la cabeza: " << endl;
-            cin>>dat;
-            list.add_head(dat);
-            cout << "Agrega un elemento por la cabeza: " << endl;
-            cin>>dat;
-            list.add_head(dat);
-            cout << "Agrega un elemento por la cabeza: " << endl;
-            cin>>dat;
-            list.add_head(dat);
-            cout << "ingrese para obtener: " << endl;
-            cin>>dat1;
-            list.obt_by_position(dat1);
-            list.print();
+            cout << " Ingrese valor : ";  cin>> x;
+            insertar( arbol, x);
+            cout << " Ingrese valor : ";  cin>> x;
+            insertar( arbol, x);
+            cout << " Ingrese valor : ";  cin>> x;
+            verArbol(arbol, 0);
+            cout<<" Valor a eliminar: "; cin>> x;
+            elimina(arbol, x);
+            cout << "\n\tEliminado..!";
+            verArbol(arbol, 0);
             break;
+
         case 2:
             break;
         case 3:
             break;
         default:
-
-            ;
+            break;
     }
 
 
