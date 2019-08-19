@@ -44,20 +44,16 @@ void List::del_head(){
 
 // Obtener por posición del nodo
 void List::obt_by_position(int pos) {
-    Node* temp = m_head;
-    int i;
-    if (pos < 1 || pos > m_num_nodes) {
-        cout << "Fuera de rango " << endl;
-    }
-    else{
-        while (temp) {
-            if (i==pos){
-                cout<<temp->data<<endl;
-            }
-            temp = temp->next;
-            i++;
+    Node *temp = m_head;
+
+    for(int i; i<=m_num_nodes; i++){
+        if (i==pos){
+            temp->print();
+        }else{
+            temp=temp->next;
         }
     }
+
 }
 
 void List::print() {
