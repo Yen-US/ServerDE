@@ -1,5 +1,6 @@
 #include "node.h"
 
+
 // Constructor por defecto
 Node::Node()
 {
@@ -9,7 +10,7 @@ Node::Node()
 
 // Constructor por parámetro
 
-Node::Node(int data_)
+Node::Node(Pelicula data_)
 {
     data = data_;
     next = NULL;
