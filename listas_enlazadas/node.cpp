@@ -10,7 +10,7 @@ Node::Node()
 
 // Constructor por parámetro
 
-Node::Node(Pelicula data_)
+Node::Node(int data_)
 {
     data = data_;
     next = NULL;
